@@ -15,6 +15,28 @@ To get started with FreeAccounting, follow these steps:
 
 To be updated...
 
+## Architecture
+```plaintext 
++----------------+       +---------------------+       +----------------+
+|                |       |                     |       |                |
+|    Next.js     +------->  ASP.NET Core API   +------->     MinIO      |
+|  (Frontend)    |       |   (Backend)         |       |  (Storage)     |
+|                |       |                     |       |                |
++----------------+       +---------------------+       +----------------+
+        ^                          ^                     ^
+        |                          |                     |
+        |                          |                     |
+        +--------------------------+                     |
+                 DTOs                                    |
+                                                        \|/
+                                                  +----------------+
+                                                  |                |
+                                                  |   PostgreSQL   |
+                                                  |   (Database)   |
+                                                  |                |
+                                                  +----------------+
+```
+
 ## License
 
 FreeAccounting is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
