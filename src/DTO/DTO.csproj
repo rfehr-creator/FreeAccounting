@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MTT" Version="0.7.2" />
+  </ItemGroup>
+
+  <Target Name="Convert" BeforeTargets="PrepareForBuild">
+    <ConvertMain WorkingDirectory="Models" ConvertDirectory="../../website/src/models/" />
+  </Target>
+</Project>
