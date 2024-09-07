@@ -1,4 +1,4 @@
-using DTO.Models;
+using DTO.Models.Account;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AccountingApi.Controllers;
